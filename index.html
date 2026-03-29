@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" class="js"><head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
         <title>QQ Solutions - Web Design Agency</title>
         <meta name="description" content="QQ Solutions is a web design agency specializing in branding, custom websites, and digital advertising.">
 
@@ -594,7 +594,16 @@
             <div id="edit_button" class="edit_button" onclick="return gtag_report_conversion_eb();">
             <!-- div id="edit_button" class="edit_button" -->
                 <span class="edit_button_point"></span>
-                <span class="edit_button_text"></span>
+                <span class="edit_button_text">
+                  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="edit-ring-svg" aria-hidden="true">
+                    <defs>
+                      <path id="circle-path" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"/>
+                    </defs>
+                    <text font-size="10.5" font-family="Manrope,Arial,sans-serif" font-weight="700" letter-spacing="3.5" fill="currentColor">
+                      <textPath href="#circle-path">START A PROJECT ✦ QQ SOLUTIONS ✦ </textPath>
+                    </text>
+                  </svg>
+                </span>
                 <span class="edit_button_pencil"></span>
             </div>
         </div>
@@ -721,6 +730,16 @@
     
 
 <style>
+/* Edit button rotating text ring */
+.edit-ring-svg {
+  width: 100%; height: 100%;
+  animation: rotation-back 12s linear infinite;
+  display: block;
+  color: #000;
+}
+.edit_button:hover .edit-ring-svg { animation-duration: 1s; }
+body.animated .edit-ring-svg { color: #fff; }
+
 /* Footer CTA heading — demoted to h2 for SEO but keeps h1 visual style */
 #ftitle {
   font-family: "MADE Mirage", serif;

@@ -83,17 +83,14 @@ p { margin: 0px; font-size: 40px; }
 #award-text { max-width: 610px; display: block; margin-bottom: 50px; }
 .bottom_nav { width: 50%; position: sticky; bottom: 3vh; left: 50%; transform: translateX(-50%); pointer-events: none; padding-bottom: 20px; }
 .edit_button { position: relative; margin-left: 120%; pointer-events: all; width: 120px; height: 120px; transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
-.edit_button_pencil { display: block; width: 100%; height: 100%; top: 0px; left: 0px; position: absolute; background-image: url("../img/pencil_black.png"); background-size: 100% 100%; background-position: center center; }
+.edit_button_pencil { display: block; width: 100%; height: 100%; top: 0px; left: 0px; position: absolute; background-image: url('../images/pencil_white.png'); background-size: 100% 100%; background-position: center center; filter: invert(1); }
 .edit_button_text { display: block; width: 100%; height: 100%; transform: scale(1); transition: transform 0.3s, opacity 0.3s; overflow: hidden; }
-.edit_button_text::before { content: ""; display: block; background-image: url("../img/text_black.png"); background-size: 100% 100%; background-position: center center; width: 100%; height: 100%; animation: 12s linear 0s infinite normal none running rotation-back; }
-.mainBody.animated .edit_button_pencil { background-image: url('../images/pencil_white.png'); }
-.mainBody.animated .edit_button_text::before { background-image: url("../img/text_white.png"); }
-.edit_button:hover .edit_button_text::before { animation: 1s linear 0s infinite normal none running rotation-back; }
+.mainBody.animated .edit_button_pencil { background-image: url('../images/pencil_white.png'); filter: none; }
 .edit_button:hover .edit_button_text { transform: scale(0); opacity: 0; transition: transform 0.4s linear 0.1s, opacity 0.1s linear 0.1s; }
 .edit_button_point { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); width: 90%; height: 90%; border-radius: 50%; background-color: rgb(0, 0, 0); transition: transform 0.2s ease-out; }
 .edit_button:hover .edit_button_point { transform: translate(-50%, -50%) scale(1); }
-.mainBody .edit_button:hover .edit_button_pencil { background-image: url('../images/pencil_white.png'); }
-.mainBody.animated .edit_button:hover .edit_button_pencil { background-image: url("../img/pencil_black.png") !important; }
+.mainBody .edit_button:hover .edit_button_pencil { background-image: url('../images/pencil_white.png'); filter: none; }
+.mainBody.animated .edit_button:hover .edit_button_pencil { background-image: url('../images/pencil_white.png') !important; filter: invert(1); }
 .mainBody.animated .edit_button:hover .edit_button_point { background-color: rgb(255, 255, 255); }
 .edit_button_overlay { position: fixed; width: 100vw; height: 100vh; background-color: rgb(255, 255, 255); top: 0px; left: 0px; z-index: 1; opacity: 0; transform: scale(0); transition: opacity 0.3s 0.3s, transform 0.01s linear 0.7s; }
 .edit_button_overlay.actived { transform: scale(1); transition: opacity 0.2s; opacity: 1; }
