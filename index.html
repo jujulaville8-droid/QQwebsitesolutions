@@ -18,9 +18,15 @@
         <meta name="twitter:creator" content="@qqsolutions">
         <meta name="twitter:description" content="QQ Solutions is a web design agency specializing in branding, custom websites, and digital advertising.">
 	
-	<!-- Google Tag Manager -->
-        
-        <!-- End Google Tag Manager -->
+	<!-- Google Analytics GA4 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-332JW6BKZG"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-332JW6BKZG');
+        </script>
+        <!-- End Google Analytics -->
 
 
         <!-- Global site tag (gtag.js) - Google ADS -->
@@ -603,8 +609,8 @@
                 <div class="box">
                     <div class="top_footer">
                         <div class="box-title">
-                            <h1 id="ftitle" onclick="return gtag_report_conversion_sap();" class="animated">
-                            <!--h1 id="ftitle" -->
+                            <h2 id="ftitle" onclick="return gtag_report_conversion_sap();" class="animated">
+                            <!--h2 id="ftitle" -->
                                 <i>
                                     <span>s</span><span>t</span><span>a</span><span>r</span><span>t</span>
                                 </i>
@@ -614,7 +620,7 @@
                                 <i>
                                     <span>p</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span>
                                 </i>
-                            </h1>
+                            </h2>
                             <div class="contact_overlay"></div>
                         </div>
                     </div>
@@ -715,6 +721,17 @@
     
 
 <style>
+/* Footer CTA heading — demoted to h2 for SEO but keeps h1 visual style */
+#ftitle {
+  font-family: "MADE Mirage", serif;
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: none;
+  letter-spacing: 0;
+  display: inline;
+  margin: 0;
+}
+
 /* Hero subtitle */
 .hero-subtitle {
   font-family: 'Manrope', Arial, sans-serif;
