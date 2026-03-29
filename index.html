@@ -642,6 +642,10 @@
             <style>
               body.animated .site-logo-black { display: none !important; }
               body.animated .site-logo-white { display: block !important; }
+              @media (max-width: 768px) {
+                #site-logo { top: -60px !important; left: -60px !important; }
+                .site-logo-black, .site-logo-white { width: 220px !important; height: 220px !important; }
+              }
             </style>
         </div>
         <span class="edit_button_overlay"></span>
