@@ -56,6 +56,16 @@
                         <span>L</span><span>A</span><span>U</span><span>N</span><span>C</span><span>H</span>
                     </i>
                 </h1>
+                <p class="hero-subtitle">Custom websites that convert — built for local businesses.</p>
+                <div class="trust-strip">
+                  <span>20+ businesses launched</span>
+                  <span class="trust-sep">·</span>
+                  <span>Fast turnaround</span>
+                  <span class="trust-sep">·</span>
+                  <span>No templates</span>
+                  <span class="trust-sep">·</span>
+                  <span>Real results</span>
+                </div>
             </div>
             <div class="scrolldown"><div></div></div>
         </div>
@@ -232,7 +242,7 @@
                     </div>
                 </div>
             </div>
-        <div class="container">
+        <div class="container" id="portfolio-section">
           <span class="delegato" id="delegato-testo-4"></span>
             <div class="box">
                 <h2 id="portfolio-title" class="animated" style="margin-bottom:50px;">
@@ -523,6 +533,57 @@
                 </div>
             </div>
         </div>
+        <!-- FAQ Section -->
+        <section id="faq-section" class="faq-section">
+          <div class="faq-container">
+            <h2 class="faq-heading animated">
+              <span>f</span><span>a</span><span>q</span>
+            </h2>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How long does it take to build a website?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <p class="faq-answer">Most projects are delivered in 2–4 weeks from kickoff. The timeline depends on scope and how quickly you can provide content (copy, images, brand assets). We move fast — and we'll let you know exactly what we need upfront.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How much does a website cost?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <p class="faq-answer">Most small business sites start at $1,500–$3,500. E-commerce and custom web apps vary based on complexity. We give clear, flat-rate quotes before any work begins — no surprises.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do I need to provide content and copy?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <p class="faq-answer">You can — but you don't have to. We offer full copywriting and can source or optimize photography. Just tell us what you have and we'll handle the rest.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Will my site work on phones and tablets?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <p class="faq-answer">Always. Every site we build is mobile-first and tested across devices and browsers. With 60%+ of web traffic on mobile, this isn't optional — it's the baseline.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What happens after the site goes live?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <p class="faq-answer">We offer ongoing support packages for updates, performance monitoring, and new features. Or we hand it off cleanly so you or your team can manage it. Either way, you won't be left stranded.</p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you work with businesses outside the US?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <p class="faq-answer">Yes. We work with clients anywhere in the world. All communication is async-friendly and we accommodate different time zones without issue.</p>
+            </div>
+          </div>
+        </section>
+
         <div class="bottom_nav">
             <div id="edit_button" class="edit_button" onclick="return gtag_report_conversion_eb();">
             <!-- div id="edit_button" class="edit_button" -->
@@ -593,6 +654,13 @@
               }
             </style>
         </div>
+        <nav id="main-nav">
+          <a href="#award-agency">Services</a>
+          <a href="#portfolio-section">Work</a>
+          <a href="#testimonials-section">Reviews</a>
+          <a href="#faq-section">FAQ</a>
+          <a href="#" onclick="openContactForm(); return false;">Contact</a>
+        </nav>
         <span class="edit_button_overlay"></span>
         <div id="contactframe" class="contact-form-wrapper">
           <div class="contact-form-inner">
@@ -646,9 +714,137 @@
         
     
 
+<style>
+/* Hero subtitle */
+.hero-subtitle {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 16px !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: rgba(0,0,0,0.5);
+  margin-top: 20px !important;
+  max-width: 400px;
+  line-height: 1.6;
+  text-align: center;
+}
+body.animated .hero-subtitle { color: rgba(255,255,255,0.5); }
+
+/* Trust strip */
+.trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(0,0,0,0.35);
+}
+.trust-sep { opacity: 0.4; }
+body.animated .trust-strip { color: rgba(255,255,255,0.35); }
+@media (max-width: 600px) { .trust-strip { font-size: 10px; gap: 12px; } }
+
+/* Main nav */
+#main-nav {
+  position: fixed;
+  top: 36px;
+  right: 48px;
+  z-index: 10001;
+  display: flex;
+  gap: 30px;
+}
+#main-nav a {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+#main-nav a:hover { opacity: 1; }
+body.animated #main-nav a { color: #fff; }
+@media (max-width: 768px) { #main-nav { display: none; } }
+
+/* FAQ section */
+.faq-section {
+  padding: 100px 0 120px;
+}
+.faq-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.faq-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 26px 0;
+  cursor: pointer;
+  user-select: none;
+}
+body.animated .faq-item { border-bottom-color: rgba(255,255,255,0.12); }
+.faq-question {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: inherit;
+}
+.faq-icon {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-answer {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 16px !important;
+  line-height: 1.75;
+  color: rgba(0,0,0,0.55);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding-top 0.4s ease;
+  padding-top: 0;
+  margin: 0 !important;
+}
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding-top: 14px;
+}
+body.animated .faq-answer { color: rgba(255,255,255,0.55); }
+@media (max-width: 600px) {
+  .faq-container { padding: 0 24px; }
+  .faq-question { font-size: 15px; }
+  .faq-section { padding: 60px 0 80px; }
+}
+</style>
 <script src="js/jquery.min.js"></script>
 <script src="js/jsband-min.js"></script>
 <script src="js/blob-min.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/cursor.js"></script>
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
 </body></html>

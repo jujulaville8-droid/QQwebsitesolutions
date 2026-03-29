@@ -242,7 +242,6 @@ body.animated .testimonial-card { border-color: rgba(255,255,255,0.15); }
   .customer-awwwards li { font-size: 4.5em; }
   body .customer-awwwards li span { top: -20px; right: -3%; }
   .customer li { width: 33.333%; }
-  body { cursor: none; }
   #logo img { width: 4em; }
   .customer img { max-height: 90px; }
   h1 { font-size: 3.5em; }
@@ -315,6 +314,13 @@ body.animated .testimonial-card { border-color: rgba(255,255,255,0.15); }
   .img-inner img { width: 200px; }
   .strip { padding-left: calc(-100px + 50vw); padding-right: calc(-100px + 50vw); }
   .box-strip { width: 130px; }
+}
+@media (hover: none) {
+  .mainBody, .contact-form-wrapper,
+  .contact-form-wrapper *, .contact-form-wrapper input,
+  .contact-form-wrapper textarea, .contact-form-wrapper button,
+  .contact-form-wrapper select { cursor: auto !important; }
+  .cursor { display: none !important; }
 }
 
 
