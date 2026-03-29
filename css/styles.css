@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,900");
-@font-face { font-family: "Grumpy 24"; src: url("fonts/Grumpy-Black24.woff2") format("woff2"), url("fonts/Grumpy-Black24.woff") format("woff"), url("fonts/Grumpy-Black24.ttf") format("truetype"); font-weight: 900; font-style: normal; }
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap");
 body { overflow-y: scroll; scroll-behavior: smooth; }
 .mainBody { overflow-x: hidden; cursor: none; font-family: Arial, sans-serif; font-weight: normal; -webkit-font-smoothing: antialiased; padding: 0px; margin: 0px; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); position: relative; transition: background 0.3s linear, color 0.3s linear; }
 .mainBody.animated { background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); }
@@ -20,7 +20,7 @@ body.body_instagram #blob_container::before { opacity: 1; }
 body.body_linkedin #blob_container { background-color: rgb(41, 119, 201) !important; }
 .topnav { overflow: hidden; background-color: rgba(255, 255, 255, 0); position: fixed; top: 40px; }
 body, .work h3 { font-size: 40px; }
-h1, .box b { font-family: "Grumpy 24", serif; }
+h1, .box b { font-family: "Playfair Display", serif; }
 h1 { margin-top: 0px; margin-bottom: 0px; font-size: 3em; display: inline; }
 h3 { font-family: Arial, sans-serif; margin: 0px auto; display: inline-block; font-weight: 400; }
 input, select { background: transparent; border-top: none; border-right: none; border-left: none; border-image: initial; border-bottom: 1px solid rgb(0, 0, 0); }
@@ -113,7 +113,7 @@ body.animated .cursor-circle { border: 2px solid rgb(255, 255, 255); }
 .box-topnav { width: 65%; margin: 0px auto; }
 #logo img { width: 100px; z-index: 1; }
 .no-wrap { display: inline-block; white-space: nowrap; }
-.customer-awwwards li { position: relative; font-family: "Grumpy 24", serif; font-size: 3em; }
+.customer-awwwards li { position: relative; font-family: "Playfair Display", serif; font-size: 3em; }
 body .customer-awwwards li span { position: absolute; z-index: -1; top: -15px; right: 7%; color: rgba(30, 30, 30, 0.5) !important; }
 body.animated .customer-awwwards li span { color: rgb(30, 30, 30) !important; }
 footer { display: flex; min-height: 99vh; flex-direction: column; box-sizing: border-box; }
