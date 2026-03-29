@@ -409,13 +409,13 @@
                     position: relative;
                     width: 100%;
                     overflow: hidden;
-                    padding: 10px 0 10px;
+                    padding: 6px 0;
                     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
                     mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
                   }
                   .liquid-carousel-track {
                     display: flex;
-                    gap: 28px;
+                    gap: 12px;
                     width: max-content;
                     animation: liquid-scroll 30s linear infinite;
                   }
@@ -434,14 +434,14 @@
                     100% { transform: translateX(0); }
                   }
                   .liquid-card {
-                    flex: 0 0 340px;
+                    flex: 0 0 400px;
                   }
                   .liquid-card-inner {
                     display: flex;
                     flex-direction: column;
                     gap: 0;
                     border-radius: 16px;
-                    border: 1px solid rgba(255,255,255,0.08);
+                    border: 1px solid rgba(0,0,0,0.08);
                     overflow: hidden;
                     background: transparent;
                     backdrop-filter: url("#container-glass");
@@ -475,17 +475,11 @@
                   .liquid-card-img {
                     width: 100%;
                     aspect-ratio: 16/10;
-                    background: rgba(255,255,255,0.03);
+                    background: rgba(0,0,0,0.02);
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     overflow: hidden;
-                  }
-                  .liquid-card-img span {
-                    color: rgba(255,255,255,0.2);
-                    font-size: 16px;
-                    font-family: 'Manrope', sans-serif;
-                    letter-spacing: 2px;
                   }
                   .liquid-card-img img {
                     width: 100%;
@@ -496,25 +490,124 @@
                     padding: 18px 20px;
                   }
                   .liquid-card-title {
-                    color: #fff;
+                    color: #000;
                     font-size: 16px;
                     font-weight: 600;
                     line-height: 1;
                     margin-bottom: 6px;
                   }
                   .liquid-card-desc {
-                    color: rgba(255,255,255,0.45);
+                    color: rgba(0,0,0,0.45);
                     font-size: 13px;
                   }
+                  /* Case study overlay */
+                  .case-study-overlay {
+                    position: fixed;
+                    top: 0; left: 0;
+                    width: 100vw; height: 100vh;
+                    background: #fff;
+                    z-index: 100002;
+                    overflow-y: auto;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(30px);
+                    transition: opacity 0.4s, visibility 0.01s 0.4s, transform 0.4s;
+                    cursor: auto;
+                  }
+                  .case-study-overlay.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                    transition: opacity 0.4s, visibility 0.01s, transform 0.4s;
+                  }
+                  .case-study-close {
+                    position: fixed;
+                    top: 30px; right: 40px;
+                    font-size: 36px;
+                    color: #000;
+                    cursor: pointer;
+                    z-index: 100003;
+                    font-weight: 300;
+                    width: 50px; height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: background 0.2s;
+                  }
+                  .case-study-close:hover { background: rgba(0,0,0,0.05); }
+                  .case-study-content {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 100px 40px 80px;
+                    color: #000;
+                    font-family: 'Manrope', Arial, sans-serif;
+                  }
+                  .case-study-content h1 {
+                    font-family: 'Abril Fatface', serif;
+                    font-size: 3em;
+                    margin-bottom: 10px;
+                    display: block;
+                    color: #000;
+                  }
+                  .case-study-content .cs-type {
+                    font-size: 14px;
+                    color: #999;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin-bottom: 50px;
+                    display: block;
+                  }
+                  .case-study-content .cs-hero-img {
+                    width: 100%;
+                    border-radius: 12px;
+                    margin-bottom: 50px;
+                    box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+                  }
+                  .case-study-content h2 {
+                    font-size: 1.4em;
+                    font-weight: 700;
+                    margin: 40px 0 15px;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    color: #000;
+                  }
+                  .case-study-content p {
+                    font-size: 17px;
+                    line-height: 1.8;
+                    color: #444;
+                    margin-bottom: 20px;
+                  }
+                  .case-study-content .cs-visit {
+                    display: inline-block;
+                    margin-top: 30px;
+                    padding: 14px 40px;
+                    background: #000;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    transition: background 0.3s;
+                  }
+                  .case-study-content .cs-visit:hover { background: #333; }
                   @media (max-width: 768px) {
                     .liquid-card {
-                      flex: 0 0 260px;
+                      flex: 0 0 300px;
                     }
                     .liquid-carousel-track {
-                      animation-duration: 20s;
+                      animation-duration: 45s;
                     }
+                    .case-study-content { padding: 80px 20px 60px; }
+                    .case-study-content h1 { font-size: 2em; }
                   }
                 </style>
+
+                <!-- Case Study Overlay -->
+                <div class="case-study-overlay" id="case-study-overlay">
+                  <div class="case-study-close" id="case-study-close">&times;</div>
+                  <div class="case-study-content" id="case-study-content"></div>
+                </div>
             </div>
         </div>
         <div class="bottom_nav">

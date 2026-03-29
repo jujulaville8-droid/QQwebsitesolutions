@@ -338,4 +338,95 @@ $(document).ready(function () {
     }
   });
 
+  // ─── Case study overlay for portfolio cards ───
+  var caseStudies = {
+    'Humanizer AI': {
+      url: 'https://humanizer-eta-one.vercel.app',
+      img: 'images/portfolio/humanizer.png',
+      type: 'AI Writing Tool',
+      overview: 'Humanizer AI is an advanced content tool that transforms AI-generated text into natural, human-sounding prose. Built for content creators, marketers, and students who need authentic-sounding copy.',
+      challenge: 'The client needed a fast, intuitive web app that could process text in real-time while maintaining a clean, distraction-free interface. Performance was critical — users expect instant results.',
+      solution: 'We built a single-page application with a minimal UI focused entirely on the core task. The design uses generous whitespace, clear typography, and a streamlined two-panel layout for input and output.',
+      results: 'The platform launched to strong adoption, with users praising the speed and simplicity of the interface. Conversion rates exceeded expectations thanks to the frictionless onboarding flow.'
+    },
+    'JobLink Antigua': {
+      url: 'https://joblinkantigua.com',
+      img: 'images/portfolio/joblink.png',
+      type: 'Job Board Platform',
+      overview: 'JobLink Antigua is the leading job board platform connecting employers and job seekers across Antigua and Barbuda. A full-featured marketplace for local employment.',
+      challenge: 'The Caribbean job market lacked a modern, mobile-friendly platform. Existing solutions were outdated and difficult to navigate, leading to low engagement from both employers and candidates.',
+      solution: 'We designed and built a responsive job board with advanced search, employer dashboards, and a streamlined application flow. The design reflects the vibrant local culture while maintaining professional credibility.',
+      results: 'JobLink became the go-to employment platform in Antigua, with hundreds of active listings and a growing user base of both local and international employers.'
+    },
+    'Durham Plumber 247': {
+      url: 'https://durhamplumber247.com',
+      img: 'images/portfolio/durhamplumber.png',
+      type: 'Local Service Website',
+      overview: 'Durham Plumber 247 is a local plumbing service website designed to convert visitors into booked appointments. Every element is optimized for lead generation.',
+      challenge: 'The client needed a website that would rank locally in search results and immediately communicate trust, availability, and professionalism to homeowners in need of emergency plumbing.',
+      solution: 'We built a fast-loading, SEO-optimized site with prominent call-to-action buttons, service area maps, and trust signals like reviews and certifications placed above the fold.',
+      results: 'The site achieved first-page Google rankings for key local search terms within 8 weeks. Phone inquiries increased significantly, and the client reported a steady stream of new bookings.'
+    },
+    'PokeRater': {
+      url: 'https://pokerater.xyz',
+      img: 'images/portfolio/pokerater.png',
+      type: 'Interactive Web App',
+      overview: 'PokeRater is a fun, interactive web application where users can rate and discover Pokemon. Built as a showcase of modern frontend development with engaging UI interactions.',
+      challenge: 'The project needed to balance playful, game-inspired aesthetics with smooth performance and intuitive navigation across a large dataset of characters.',
+      solution: 'We created a visually rich interface with card-based layouts, smooth transitions, and an addictive rating mechanic. The app loads quickly despite the large image library thanks to lazy loading and optimization.',
+      results: 'The app gained traction in the Pokemon community with users spending significant time exploring and rating. It demonstrates our ability to build engaging, interactive experiences.'
+    }
+  };
+
+  // Generic case study for non-client projects
+  var genericStudy = {
+    overview: 'A showcase project demonstrating our ability to design and develop high-quality digital experiences across different industries and use cases.',
+    challenge: 'Each project presented unique design and technical challenges that required creative problem-solving and a deep understanding of the target audience.',
+    solution: 'We delivered a polished, responsive website with modern design principles, optimized performance, and a seamless user experience across all devices.',
+    results: 'The project was delivered on time and exceeded client expectations, resulting in measurable improvements in engagement and conversion metrics.'
+  };
+
+  $(document).on('click', '.liquid-card-inner', function () {
+    var title = $(this).find('.liquid-card-title').text();
+    var desc = $(this).find('.liquid-card-desc').text();
+    var imgSrc = $(this).find('.liquid-card-img img').attr('src');
+    var study = caseStudies[title] || null;
+
+    var html = '';
+    if (study) {
+      html = '<h1>' + title + '</h1>' +
+        '<span class="cs-type">' + study.type + '</span>' +
+        '<img class="cs-hero-img" src="' + study.img + '" alt="' + title + '">' +
+        '<h2>Overview</h2><p>' + study.overview + '</p>' +
+        '<h2>The Challenge</h2><p>' + study.challenge + '</p>' +
+        '<h2>Our Solution</h2><p>' + study.solution + '</p>' +
+        '<h2>Results</h2><p>' + study.results + '</p>' +
+        '<a class="cs-visit" href="' + study.url + '" target="_blank">Visit Live Site &rarr;</a>';
+    } else {
+      html = '<h1>' + title + '</h1>' +
+        '<span class="cs-type">' + desc + '</span>' +
+        '<img class="cs-hero-img" src="' + imgSrc + '" alt="' + title + '">' +
+        '<h2>Overview</h2><p>' + genericStudy.overview + '</p>' +
+        '<h2>The Challenge</h2><p>' + genericStudy.challenge + '</p>' +
+        '<h2>Our Solution</h2><p>' + genericStudy.solution + '</p>' +
+        '<h2>Results</h2><p>' + genericStudy.results + '</p>';
+    }
+
+    $('#case-study-content').html(html);
+    $('#case-study-overlay').addClass('active');
+    $('body').css('overflow', 'hidden');
+  });
+
+  $('#case-study-close').on('click', function () {
+    $('#case-study-overlay').removeClass('active');
+    $('body').css('overflow', '');
+  });
+
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape' && $('#case-study-overlay').hasClass('active')) {
+      $('#case-study-overlay').removeClass('active');
+      $('body').css('overflow', '');
+    }
+  });
+
 });
