@@ -634,8 +634,15 @@
                 </div>
             </div>  
         </footer>
-        <div id="site-logo" style="position:fixed; top:20px; left:25px; z-index:10000;">
-            <a href="#start"><img src="images/QQ logo inverted.jpg" alt="QQ Solutions" style="width:165px; height:165px; object-fit:cover; border-radius:50%;"></a>
+        <div id="site-logo" style="position:fixed; top:-30px; left:-30px; z-index:10000;">
+            <a href="#start">
+              <img src="images/QQ logo black.png" alt="QQ Solutions" class="site-logo-black" style="width:320px; height:320px; object-fit:contain;">
+              <img src="images/QQ logo transparent.png" alt="QQ Solutions" class="site-logo-white" style="width:320px; height:320px; object-fit:contain; display:none;">
+            </a>
+            <style>
+              body.animated .site-logo-black { display: none !important; }
+              body.animated .site-logo-white { display: block !important; }
+            </style>
         </div>
         <span class="edit_button_overlay"></span>
         <div id="contactframe" class="contact-form-wrapper">
