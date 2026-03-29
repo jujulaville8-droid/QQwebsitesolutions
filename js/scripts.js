@@ -414,18 +414,18 @@ $(document).ready(function () {
 
     $('#case-study-content').html(html);
     $('#case-study-overlay').addClass('active');
-    $('body').css('overflow', 'hidden');
+    $('body').css('overflow', 'hidden').addClass('case-study-active');
   });
 
   $('#case-study-close').on('click', function () {
     $('#case-study-overlay').removeClass('active');
-    $('body').css('overflow', '');
+    $('body').css('overflow', '').removeClass('case-study-active');
   });
 
   $(document).on('keydown', function (e) {
     if (e.key === 'Escape' && $('#case-study-overlay').hasClass('active')) {
       $('#case-study-overlay').removeClass('active');
-      $('body').css('overflow', '');
+      $('body').css('overflow', '').removeClass('case-study-active');
     }
   });
 
