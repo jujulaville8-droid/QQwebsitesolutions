@@ -272,47 +272,9 @@
                 <div id="award-agency" class="container black">
                     <div class="box" id="awwwards">
                         <h2 id="aa-title" class="animated">
-                            <span>A</span><span>w</span><span>a</span><span>r</span><span>d</span><span>s</span> <span>&amp;</span> <span>R</span><span>e</span><span>c</span><span>o</span><span>g</span><span>n</span><span>i</span><span>t</span><span>i</span><span>o</span><span>n</span>
+                            <span>s</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
                         </h2>
-                        <span id="award-text" class="animated">
-                            <span>Every</span>
-                            <span>project</span>
-                            <span>is</span>
-                            <span>a</span>
-                            <span>challenge</span>
-                            <span>we</span>
-                            <span>refuse</span>
-                            <span>to</span>
-                            <span>turn</span>
-                            <span>down.</span>
-                        </span>
-                        <ul id="aa-loghi" class="customer customer-awwwards animated">
-                            <li>
-                                <div class="logo_placeholder"><img src="images/awwwards.png" alt="award1"></div>
-                                <span data-count="2">2</span>
-                            </li>
-                            <li>
-                                <div class="logo_placeholder"><img src="images/cssda.png" alt="award1"></div>
-                                <span data-count="4">4</span>
-                            </li>
-                            <li>
-                                <div class="logo_placeholder"><img src="images/csswinner.png" alt="award1"></div>
-                                <span data-count="1">1</span>
-                            </li>
-                         </ul>
-                    </div>
-                </div>
-            </div>
-        <div class="container">
-          <span class="delegato" id="delegato-testo-4"></span>
-            <div class="box">
-                <div class="container-box-flex">
-                    <div class="box-flex">
-                        <div class="box-flex-left">
-                            <h2 id="services" class="animated"><span>s</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span></h2>
-                        </div>
-                        <div class="box-flex-right">
-                            <div class="box-works">
+                        <div class="box-works" style="margin-top:40px;">
                                 <div class="work work-1 animated">
                                     <h3>Branding</h3>
                                     <ul id="branding" class="animated">
@@ -360,10 +322,258 @@
                                         <li>Community Management</li>
                                     </ul>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        <div class="container">
+          <span class="delegato" id="delegato-testo-4"></span>
+            <div class="box">
+                <h2 id="portfolio-title" class="animated" style="margin-bottom:50px;">
+                  <span>o</span><span>u</span><span>r</span> <span>w</span><span>o</span><span>r</span><span>k</span>
+                </h2>
+
+                <!-- SVG Glass Filter -->
+                <svg style="position:absolute;width:0;height:0;">
+                  <defs>
+                    <filter id="container-glass" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+                      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.02" numOctaves="1" seed="1" result="turbulence"/>
+                      <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
+                      <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="120" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
+                      <feGaussianBlur in="displaced" stdDeviation="4" result="finalBlur"/>
+                      <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
+                    </filter>
+                  </defs>
+                </svg>
+
+                <div class="liquid-carousel" id="liquid-carousel">
+                  <div class="liquid-carousel-track" id="liquid-carousel-track">
+                    <!-- Set 1 -->
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 1</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project One</div><div class="liquid-card-desc">Branding &amp; Web Design</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 2</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Two</div><div class="liquid-card-desc">eCommerce Platform</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 3</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Three</div><div class="liquid-card-desc">Landing Page</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 4</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Four</div><div class="liquid-card-desc">Web Application</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 5</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Five</div><div class="liquid-card-desc">UI / UX Design</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 6</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Six</div><div class="liquid-card-desc">Custom Website</div></div>
+                      </div>
+                    </div>
+                    <!-- Set 2 (duplicate for seamless loop) -->
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 1</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project One</div><div class="liquid-card-desc">Branding &amp; Web Design</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 2</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Two</div><div class="liquid-card-desc">eCommerce Platform</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 3</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Three</div><div class="liquid-card-desc">Landing Page</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 4</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Four</div><div class="liquid-card-desc">Web Application</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 5</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Five</div><div class="liquid-card-desc">UI / UX Design</div></div>
+                      </div>
+                    </div>
+                    <div class="liquid-card">
+                      <div class="liquid-card-inner">
+                        <div class="liquid-card-img"><span>Site 6</span></div>
+                        <div class="liquid-card-header"><div class="liquid-card-title">Project Six</div><div class="liquid-card-desc">Custom Website</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row 2: Moving RIGHT -->
+                <div class="liquid-carousel">
+                  <div class="liquid-carousel-track liquid-carousel-track--reverse">
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 7</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Seven</div><div class="liquid-card-desc">Brand Identity</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 8</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Eight</div><div class="liquid-card-desc">Corporate Website</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 9</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Nine</div><div class="liquid-card-desc">SaaS Dashboard</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 10</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Ten</div><div class="liquid-card-desc">Portfolio Site</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 11</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Eleven</div><div class="liquid-card-desc">Restaurant Website</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 12</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Twelve</div><div class="liquid-card-desc">Real Estate Platform</div></div></div></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 7</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Seven</div><div class="liquid-card-desc">Brand Identity</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 8</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Eight</div><div class="liquid-card-desc">Corporate Website</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 9</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Nine</div><div class="liquid-card-desc">SaaS Dashboard</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 10</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Ten</div><div class="liquid-card-desc">Portfolio Site</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 11</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Eleven</div><div class="liquid-card-desc">Restaurant Website</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 12</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Twelve</div><div class="liquid-card-desc">Real Estate Platform</div></div></div></div>
+                  </div>
+                </div>
+
+                <!-- Row 3: Moving LEFT -->
+                <div class="liquid-carousel">
+                  <div class="liquid-carousel-track">
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 13</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Thirteen</div><div class="liquid-card-desc">Fitness Studio</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 14</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Fourteen</div><div class="liquid-card-desc">Medical Clinic</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 15</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Fifteen</div><div class="liquid-card-desc">Law Firm</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 16</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Sixteen</div><div class="liquid-card-desc">Music Platform</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 17</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Seventeen</div><div class="liquid-card-desc">Non-Profit</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 18</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Eighteen</div><div class="liquid-card-desc">Travel Agency</div></div></div></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 13</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Thirteen</div><div class="liquid-card-desc">Fitness Studio</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 14</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Fourteen</div><div class="liquid-card-desc">Medical Clinic</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 15</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Fifteen</div><div class="liquid-card-desc">Law Firm</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 16</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Sixteen</div><div class="liquid-card-desc">Music Platform</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 17</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Seventeen</div><div class="liquid-card-desc">Non-Profit</div></div></div></div>
+                    <div class="liquid-card"><div class="liquid-card-inner"><div class="liquid-card-img"><span>Site 18</span></div><div class="liquid-card-header"><div class="liquid-card-title">Project Eighteen</div><div class="liquid-card-desc">Travel Agency</div></div></div></div>
+                  </div>
+                </div>
+
+                <style>
+                  .liquid-carousel {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 10px 0 10px;
+                    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+                    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+                  }
+                  .liquid-carousel-track {
+                    display: flex;
+                    gap: 28px;
+                    width: max-content;
+                    animation: liquid-scroll 30s linear infinite;
+                  }
+                  .liquid-carousel:hover .liquid-carousel-track {
+                    animation-play-state: paused;
+                  }
+                  @keyframes liquid-scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                  }
+                  .liquid-carousel-track--reverse {
+                    animation: liquid-scroll-reverse 30s linear infinite;
+                  }
+                  @keyframes liquid-scroll-reverse {
+                    0% { transform: translateX(-50%); }
+                    100% { transform: translateX(0); }
+                  }
+                  .liquid-card {
+                    flex: 0 0 340px;
+                  }
+                  .liquid-card-inner {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    border-radius: 16px;
+                    border: 1px solid rgba(255,255,255,0.08);
+                    overflow: hidden;
+                    background: transparent;
+                    backdrop-filter: url("#container-glass");
+                    -webkit-backdrop-filter: url("#container-glass");
+                    box-shadow:
+                      0 0 8px rgba(0,0,0,0.03),
+                      0 2px 6px rgba(0,0,0,0.08),
+                      inset 3px 3px 0.5px -3.5px rgba(255,255,255,0.09),
+                      inset -3px -3px 0.5px -3.5px rgba(255,255,255,0.85),
+                      inset 1px 1px 1px -0.5px rgba(255,255,255,0.6),
+                      inset -1px -1px 1px -0.5px rgba(255,255,255,0.6),
+                      inset 0 0 6px 6px rgba(255,255,255,0.12),
+                      inset 0 0 2px 2px rgba(255,255,255,0.06),
+                      0 0 12px rgba(0,0,0,0.15);
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
+                    cursor: pointer;
+                  }
+                  .liquid-card-inner:hover {
+                    transform: translateY(-6px) scale(1.02);
+                    box-shadow:
+                      0 0 12px rgba(0,0,0,0.05),
+                      0 8px 24px rgba(0,0,0,0.15),
+                      inset 3px 3px 0.5px -3.5px rgba(255,255,255,0.12),
+                      inset -3px -3px 0.5px -3.5px rgba(255,255,255,0.9),
+                      inset 1px 1px 1px -0.5px rgba(255,255,255,0.7),
+                      inset -1px -1px 1px -0.5px rgba(255,255,255,0.7),
+                      inset 0 0 8px 8px rgba(255,255,255,0.15),
+                      inset 0 0 3px 3px rgba(255,255,255,0.08),
+                      0 0 20px rgba(255,255,255,0.08);
+                  }
+                  .liquid-card-img {
+                    width: 100%;
+                    aspect-ratio: 16/10;
+                    background: rgba(255,255,255,0.03);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                  }
+                  .liquid-card-img span {
+                    color: rgba(255,255,255,0.2);
+                    font-size: 16px;
+                    font-family: 'Grumpy 24', Georgia, serif;
+                    letter-spacing: 2px;
+                  }
+                  .liquid-card-img img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                  .liquid-card-header {
+                    padding: 18px 20px;
+                  }
+                  .liquid-card-title {
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1;
+                    margin-bottom: 6px;
+                  }
+                  .liquid-card-desc {
+                    color: rgba(255,255,255,0.45);
+                    font-size: 13px;
+                  }
+                  @media (max-width: 768px) {
+                    .liquid-card {
+                      flex: 0 0 260px;
+                    }
+                    .liquid-carousel-track {
+                      animation-duration: 20s;
+                    }
+                  }
+                </style>
             </div>
         </div>
         <div class="bottom_nav">
