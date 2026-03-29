@@ -108,7 +108,7 @@ p { margin: 0px; font-size: 40px; }
 .work ul { padding: 0px; margin: 0px auto; list-style: none; }
 .box-header span { display: inline-block; }
 .cursor { }
-.cursor__inner { pointer-events: none; position: absolute; top: 0px; left: 0px; border-radius: 70%; mix-blend-mode: difference; will-change: opacity; backface-visibility: hidden; z-index: 100001; }
+.cursor__inner { pointer-events: none; position: absolute; top: 0px; left: 0px; border-radius: 70%; mix-blend-mode: difference; will-change: opacity; backface-visibility: hidden; z-index: 100002; }
 body .cursor-dot { width: 20px; height: 20px; background-color: rgb(255, 255, 255); backface-visibility: hidden; }
 body .cursor-circle { width: 35px; height: 35px; border: 2px solid rgb(255, 255, 255); backface-visibility: hidden; }
 body.animated .cursor-dot { background: rgb(255, 255, 255); }
@@ -137,7 +137,8 @@ footer .container { padding: 30px 0px; margin: auto 0px; min-height: 80vh; box-s
 .contact_overlay.opened { transform: scale(30); }
 iframe, .contact-form-wrapper { position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; overflow-x: hidden; opacity: 0; visibility: hidden; z-index: -1500; transform: translateY(20px); transition: visibility 0.01s linear 0.31s, opacity 0.3s linear, transform 0.3s linear, z-index 0.1s linear 0.31s; overflow-y: scroll !important; }
 iframe.animated, .contact-form-wrapper.animated { transform: translateY(0px); visibility: visible; opacity: 1; z-index: 100001; transition: visibility 0.01s, opacity 0.3s linear, transform 0.3s linear; }
-.contact-form-wrapper { background: #fff; }
+.contact-form-wrapper { background: #fff; cursor: none; }
+.contact-form-wrapper *, .contact-form-wrapper input, .contact-form-wrapper textarea, .contact-form-wrapper button, .contact-form-wrapper select { cursor: none; }
 .contact-form-wrapper input:focus, .contact-form-wrapper textarea:focus, .contact-form-wrapper select:focus { border-bottom-color: #999; }
 .contact-form-wrapper button:hover { background: #333 !important; }
 #close_form { display: block; width: 70px; height: 70px; position: relative; margin-left: auto; }
