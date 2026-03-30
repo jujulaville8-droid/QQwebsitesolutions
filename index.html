@@ -339,6 +339,9 @@
                     gap: 12px;
                     width: max-content;
                     animation: liquid-scroll 30s linear infinite;
+                    will-change: transform;
+                    -webkit-transform: translateZ(0);
+                    transform: translateZ(0);
                   }
                   .liquid-carousel:hover .liquid-carousel-track {
                     animation-play-state: paused;
@@ -529,6 +532,13 @@
                     .liquid-carousel-track--reverse {
                       gap: 10px;
                       animation-duration: 40s !important;
+                    }
+                    .liquid-card-inner {
+                      backdrop-filter: none;
+                      -webkit-backdrop-filter: none;
+                      box-shadow:
+                        0 1px 4px rgba(0,0,0,0.08),
+                        0 0 12px rgba(0,0,0,0.12);
                     }
                     .liquid-card-header {
                       padding: 12px 14px;
