@@ -324,8 +324,33 @@ $(document).ready(function () {
   // ─── Contact form submission ───
   $('#contact-form').on('submit', function (e) {
     e.preventDefault();
-    $(this).fadeOut(300, function () {
-      $('#form-success').fadeIn(300);
+    var $form = $(this);
+    var $btn = $form.find('button[type="submit"]');
+    $btn.prop('disabled', true).text('Sending...');
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: $form.find('[name="name"]').val(),
+        email: $form.find('[name="email"]').val(),
+        phone: $form.find('[name="phone"]').val(),
+        message: $form.find('[name="message"]').val(),
+        budget: $form.find('[name="budget"]').val(),
+      }),
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.success) {
+        $form.fadeOut(300, function () { $('#form-success').fadeIn(300); });
+      } else {
+        $btn.prop('disabled', false).text('Send');
+        alert('Something went wrong. Please email us directly at hello@qqwebsitesolutions.com');
+      }
+    })
+    .catch(function () {
+      $btn.prop('disabled', false).text('Send');
+      alert('Something went wrong. Please email us directly at hello@qqwebsitesolutions.com');
     });
   });
 
