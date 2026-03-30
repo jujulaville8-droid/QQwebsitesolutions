@@ -247,6 +247,11 @@ $(document).ready(function () {
     if (e.key === 'Escape') closeContactForm();
   });
 
+  window.openContactForm = function () {
+    $('.mainBody').css('overflow', 'hidden');
+    setTimeout(function () { $('#contactframe').addClass('animated'); }, 300);
+  };
+
   window.closeContactForm = function () {
     $('#contactframe').removeClass('animated');
     setTimeout(function () {
