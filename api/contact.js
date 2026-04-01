@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: 'QQ Solutions Contact <hello@qqwebsitesolutions.com>',
-        to: ['hello@qqwebsitesolutions.com'],
+        to: ['hello@mail.qqwebsitesolutions.com'],
         reply_to: email,
         subject: `New project inquiry from ${name}`,
         html: `
