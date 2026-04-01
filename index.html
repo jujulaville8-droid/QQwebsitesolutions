@@ -72,7 +72,7 @@
                   <span class="trust-sep">·</span>
                   <span>Real results</span>
                 </div>
-                <button class="hero-cta" onclick="openContactForm()">Start a Project</button>
+                <a class="hero-cta" href="https://calendly.com/qqwebsitesolutions/qq-solutions-consultation" target="_blank" rel="noopener">Book a Consultation</a>
             </div>
             <div class="scrolldown"><div></div></div>
         </div>
@@ -668,6 +668,7 @@
           <a href="#portfolio-section">Work</a>
           <a href="#testimonials-section">Reviews</a>
           <a href="#faq-section">FAQ</a>
+          <a href="business-card.html" target="_blank">Card</a>
           <a href="#" onclick="openContactForm(); return false;">Contact</a>
         </nav>
         <span class="edit_button_overlay"></span>
@@ -694,10 +695,30 @@
                   <input type="tel" name="phone" style="width:100%; padding:12px 0; font-size:20px; border:none; border-bottom:1px solid #000; background:transparent; color:#000; outline:none;" />
                 </div>
                 <div style="margin-bottom:30px;">
+                  <label style="display:block; font-size:14px; color:#999; margin-bottom:8px; text-transform:uppercase; letter-spacing:2px;">Business Name</label>
+                  <input type="text" name="business" style="width:100%; padding:12px 0; font-size:20px; border:none; border-bottom:1px solid #000; background:transparent; color:#000; outline:none;" />
+                </div>
+                <div style="margin-bottom:30px;">
+                  <label style="display:block; font-size:14px; color:#999; margin-bottom:8px; text-transform:uppercase; letter-spacing:2px;">Website URL</label>
+                  <input type="url" name="website" placeholder="https://..." style="width:100%; padding:12px 0; font-size:20px; border:none; border-bottom:1px solid #000; background:transparent; color:#000; outline:none;" />
+                </div>
+                <div style="margin-bottom:30px;">
+                  <label style="display:block; font-size:14px; color:#999; margin-bottom:8px; text-transform:uppercase; letter-spacing:2px;">Service Type</label>
+                  <select name="service" style="width:100%; padding:12px 0; font-size:20px; border:none; border-bottom:1px solid #000; background:transparent; color:#000; outline:none; cursor:pointer;">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Branding">Branding</option>
+                    <option value="Digital Ads">Digital Ads</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div style="margin-bottom:30px;">
                   <label style="display:block; font-size:14px; color:#999; margin-bottom:8px; text-transform:uppercase; letter-spacing:2px;">Tell us about your project</label>
                   <textarea name="message" rows="4" required style="width:100%; padding:12px 0; font-size:20px; border:none; border-bottom:1px solid #000; background:transparent; color:#000; outline:none; resize:none; font-family:Arial,sans-serif;"></textarea>
                 </div>
                 <button type="submit" style="margin-top:20px; padding:16px 50px; font-size:18px; font-family:Arial,sans-serif; background:#000; color:#fff; border:none; cursor:pointer; text-transform:uppercase; letter-spacing:2px; transition: background 0.3s;">Send</button>
+                <a href="https://calendly.com/qqwebsitesolutions/qq-solutions-consultation" target="_blank" rel="noopener" style="display:inline-block; margin-top:20px; margin-left:16px; padding:16px 50px; font-size:18px; font-family:Arial,sans-serif; background:transparent; color:#000; border:1px solid #000; cursor:pointer; text-transform:uppercase; letter-spacing:2px; text-decoration:none; transition: background 0.3s, color 0.3s;" onmouseover="this.style.background='#000';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#000'">Book a Call</a>
               </form>
               <p id="form-success" style="display:none; margin-top:30px; font-size:24px; color:#000;">Thank you! We'll be in touch soon.</p>
             </div>
@@ -716,6 +737,8 @@
 <style>
 /* Hero CTA button */
 .hero-cta {
+  display: inline-block;
+  text-decoration: none;
   margin-top: 36px;
   padding: 14px 40px;
   font-family: 'Manrope', Arial, sans-serif;

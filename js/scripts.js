@@ -266,14 +266,14 @@ $(document).ready(function () {
 
   // ─── Social link hover colors ───
   $('.footer-box-right li:first-child a').on('mouseover', function () {
-    $('body').addClass('body_blu');
-  }).on('mouseout', function () {
-    $('body').removeClass('body_blu');
-  });
-  $('.footer-box-right li:nth-child(2) a').on('mouseover', function () {
     $('body').addClass('body_instagram');
   }).on('mouseout', function () {
     $('body').removeClass('body_instagram');
+  });
+  $('.footer-box-right li:nth-child(2) a').on('mouseover', function () {
+    $('body').addClass('body_violet');
+  }).on('mouseout', function () {
+    $('body').removeClass('body_violet');
   });
   $('.footer-box-right li:nth-child(3) a').on('mouseover', function () {
     $('body').addClass('body_linkedin');
@@ -340,8 +340,10 @@ $(document).ready(function () {
         name: $form.find('[name="name"]').val(),
         email: $form.find('[name="email"]').val(),
         phone: $form.find('[name="phone"]').val(),
+        business: $form.find('[name="business"]').val(),
+        website: $form.find('[name="website"]').val(),
+        service: $form.find('[name="service"]').val(),
         message: $form.find('[name="message"]').val(),
-        budget: $form.find('[name="budget"]').val(),
       }),
     })
     .then(function (res) { return res.json(); })
