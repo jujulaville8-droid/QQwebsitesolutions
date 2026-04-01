@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A1 Auto Comparison</title>
+    <style>
+      :root {
+        --bg: #eef1f4;
+        --card: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --border: #d1d5db;
+        --header: #111827;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .page {
+        width: 1440px;
+        margin: 0 auto;
+        padding: 32px 24px 40px;
+      }
+
+      .intro {
+        margin-bottom: 24px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: #d42723;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 38px;
+        line-height: 1.15;
+      }
+
+      .sub {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        align-items: start;
+      }
+
+      .column {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 12px 28px rgba(17, 24, 39, 0.08);
+      }
+
+      .column-header {
+        background: var(--header);
+        color: white;
+        padding: 16px 18px;
+      }
+
+      .column-header h2 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.15;
+      }
+
+      .column-header p {
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.75);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .panel {
+        padding: 18px;
+      }
+
+      .panel img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: white;
+      }
+
+      .stack {
+        display: grid;
+        gap: 16px;
+      }
+
+      .caption {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="intro">
+        <p class="eyebrow">A1 Auto Review</p>
+        <h1>Current Website vs. Two QQ Concepts</h1>
+        <p class="sub">Live site on the left, then the two design directions we prepared for Carlton.</p>
+      </div>
+
+      <div class="grid">
+        <section class="column">
+          <div class="column-header">
+            <h2>Current Website</h2>
+            <p>Live on A1Auto.ca</p>
+          </div>
+          <div class="panel">
+            <p class="caption">Homepage screenshot</p>
+            <img src="original-site-trimmed.png" alt="Current A1 Auto website">
+          </div>
+        </section>
+
+        <section class="column">
+          <div class="column-header">
+            <h2>Template One</h2>
+            <p>Bold / Performance-Focused</p>
+          </div>
+          <div class="panel stack">
+            <div>
+              <p class="caption">Hero section</p>
+              <img src="../email-assets/template-one-hero.jpeg" alt="Template one hero">
+            </div>
+            <div>
+              <p class="caption">Services and trust</p>
+              <img src="../email-assets/template-one-services.jpeg" alt="Template one services">
+            </div>
+            <div>
+              <p class="caption">Process and results</p>
+              <img src="../email-assets/template-one-process-results.jpeg" alt="Template one process and results">
+            </div>
+          </div>
+        </section>
+
+        <section class="column">
+          <div class="column-header">
+            <h2>Template Two</h2>
+            <p>Premium / Editorial</p>
+          </div>
+          <div class="panel stack">
+            <div>
+              <p class="caption">Hero section</p>
+              <img src="../email-assets/template-two-hero.jpeg" alt="Template two hero">
+            </div>
+            <div>
+              <p class="caption">Services section</p>
+              <img src="../email-assets/template-two-services.jpeg" alt="Template two services">
+            </div>
+            <div>
+              <p class="caption">Process section</p>
+              <img src="../email-assets/template-two-process.jpeg" alt="Template two process">
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
